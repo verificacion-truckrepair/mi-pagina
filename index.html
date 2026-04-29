@@ -5,135 +5,185 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Growth Ads Chile</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-body {margin:0;font-family:'Poppins',sans-serif;background:#0b0f1a;color:white;}
-
-header {
-  height:100vh;
-  background:url('https://images.unsplash.com/photo-1557804506-669a67965ba0') center/cover no-repeat;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  position:relative;
-}
-
-header::after {
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.7);
-}
-
-.header-content {
-  position:relative;
-  z-index:1;
-  max-width:700px;
-}
-
-h1 {font-size:48px;}
-p {color:#cbd5f5;}
-
-.btn {
-  margin-top:20px;
-  padding:15px 30px;
-  background:#22c55e;
-  border-radius:10px;
-  text-decoration:none;
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Inter',sans-serif;
+  background:#050816;
   color:white;
-  display:inline-block;
+  line-height:1.6;
 }
 
-.section {
-  padding:80px 20px;
-  text-align:center;
-}
-
-.cards {
+/* HERO */
+.hero{
+  height:100vh;
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:30px;
-}
-
-.card {
-  background:#111827;
-  padding:25px;
-  border-radius:12px;
-  width:300px;
-}
-
-.img-section {
-  display:flex;
-  flex-wrap:wrap;
   align-items:center;
-  gap:40px;
   justify-content:center;
-}
-
-.img-section img {
-  width:400px;
-  border-radius:12px;
-}
-
-footer {
-  background:#020617;
-  padding:30px;
   text-align:center;
+  padding:20px;
+  background:radial-gradient(circle at top,#0f172a,#020617);
+}
+.hero h1{
+  font-size:52px;
+  font-weight:800;
+  max-width:800px;
+}
+.hero p{
+  margin-top:15px;
+  color:#94a3b8;
+  max-width:600px;
+  margin-left:auto;margin-right:auto;
+}
+.btn{
+  margin-top:25px;
+  padding:16px 35px;
+  background:#22c55e;
+  color:white;
+  text-decoration:none;
+  border-radius:12px;
+  display:inline-block;
+  font-weight:600;
+  transition:0.3s;
+}
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 30px rgba(34,197,94,0.3);
+}
+
+/* SECTIONS */
+.section{
+  padding:80px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+.section h2{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+}
+.card{
+  background:#0f172a;
+  padding:25px;
+  border-radius:14px;
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-6px);
+}
+
+/* STATS */
+.stats{
+  display:flex;
+  justify-content:space-around;
+  flex-wrap:wrap;
+  margin-top:40px;
+}
+.stat h3{
+  font-size:32px;
+  color:#22c55e;
+}
+
+/* PROCESS */
+.step{
+  margin-bottom:20px;
+  border-left:3px solid #22c55e;
+  padding-left:15px;
+}
+
+/* CTA */
+.cta{
+  text-align:center;
+  padding:100px 20px;
+  background:linear-gradient(135deg,#020617,#0f172a);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px;
+  color:#64748b;
+  font-size:14px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="header-content">
-    <h1>Consigue clientes todos los días con Google Ads</h1>
-    <p>Agencia especializada en generar ventas reales para empresas en Chile</p>
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <h1>No necesitas más tráfico, necesitas más clientes</h1>
+    <p>Escalamos negocios en Chile usando Google Ads con enfoque en resultados reales. Sin promesas vacías, solo crecimiento medible.</p>
     <a class="btn" href="https://wa.me/56921831815">Hablar por WhatsApp</a>
   </div>
-</header>
+</section>
 
-<section class="section img-section">
-  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71">
-  <div>
-    <h2>Sobre nosotros</h2>
-    <p>Ayudamos a empresas a crecer mediante estrategias digitales enfocadas en resultados reales. No vendemos marketing, generamos clientes.</p>
+<!-- DIFERENCIA -->
+<section class="section">
+  <h2>¿Por qué esta agencia es diferente?</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Enfoque en ventas</h3>
+      <p>No medimos clics, medimos clientes reales.</p>
+    </div>
+    <div class="card">
+      <h3>Optimización continua</h3>
+      <p>Cada campaña mejora con datos reales.</p>
+    </div>
+    <div class="card">
+      <h3>Estrategia personalizada</h3>
+      <p>No usamos plantillas, cada negocio es distinto.</p>
+    </div>
   </div>
 </section>
 
+<!-- SERVICIOS -->
 <section class="section">
   <h2>Servicios</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>Google Ads</h3>
-      <p>Campañas optimizadas para generar clientes reales</p>
-    </div>
-    <div class="card">
-      <h3>SEO</h3>
-      <p>Posicionamos tu web en Google</p>
-    </div>
-    <div class="card">
-      <h3>Optimización</h3>
-      <p>Mejoramos resultados constantemente</p>
-    </div>
+  <div class="grid">
+    <div class="card"><h3>Google Ads</h3><p>Campañas diseñadas para generar clientes.</p></div>
+    <div class="card"><h3>SEO</h3><p>Posicionamiento orgánico en Google.</p></div>
+    <div class="card"><h3>Landing Pages</h3><p>Páginas optimizadas para conversión.</p></div>
   </div>
 </section>
 
-<section class="section img-section">
-  <div>
-    <h2>Resultados</h2>
-    <p>Hemos logrado aumentar ventas hasta un 200% en campañas optimizadas</p>
-    <a class="btn" href="https://wa.me/56921831815">Solicitar auditoría</a>
+<!-- PROCESO -->
+<section class="section">
+  <h2>Cómo trabajamos</h2>
+  <div class="step"><strong>1.</strong> Analizamos tu negocio y mercado</div>
+  <div class="step"><strong>2.</strong> Creamos estrategia personalizada</div>
+  <div class="step"><strong>3.</strong> Lanzamos campañas optimizadas</div>
+  <div class="step"><strong>4.</strong> Mejoramos resultados constantemente</div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="section">
+  <h2>Resultados</h2>
+  <div class="stats">
+    <div class="stat"><h3>+200%</h3><p>Más clientes</p></div>
+    <div class="stat"><h3>+150%</h3><p>ROI</p></div>
+    <div class="stat"><h3>+300%</h3><p>Crecimiento</p></div>
   </div>
-  <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>¿Listo para escalar tu negocio?</h2>
+  <p>Solicita una auditoría gratuita y descubre cómo conseguir más clientes.</p>
+  <a class="btn" href="https://wa.me/56921831815">Solicitar ahora</a>
 </section>
 
 <footer>
-  © 2026 Growth Ads Chile
+  © 2026 Growth Ads Chile | Marketing Digital
 </footer>
 
 </body>
