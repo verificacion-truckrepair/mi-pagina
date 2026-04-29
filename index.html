@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Growth Ads Chile | Google Ads, SEO y Clientes para Empresas</title>
 
+  <title>Growth Ads Chile | Google Ads, SEO y Clientes para Empresas</title>
   <meta name="description" content="Agencia de marketing digital en Chile. Google Ads, SEO, landing pages y estrategias para conseguir más clientes." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,11 +19,21 @@
       scroll-behavior: smooth;
     }
 
+    html {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
     body {
+      width: 100%;
       font-family: 'Inter', sans-serif;
       background: #060816;
       color: #ffffff;
       overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
     }
 
     a {
@@ -41,16 +51,17 @@
       top: 0;
       width: 100%;
       z-index: 1000;
-      background: rgba(6, 8, 22, 0.78);
+      background: rgba(6, 8, 22, 0.84);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav {
-      height: 78px;
+      min-height: 76px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
     }
 
     .logo {
@@ -58,11 +69,13 @@
       align-items: center;
       gap: 12px;
       font-weight: 900;
-      font-size: 20px;
+      font-size: 19px;
       letter-spacing: -0.5px;
+      white-space: nowrap;
     }
 
     .logo-icon {
+      min-width: 44px;
       width: 44px;
       height: 44px;
       border-radius: 14px;
@@ -76,10 +89,10 @@
 
     .nav-links {
       display: flex;
-      gap: 28px;
+      gap: 26px;
       color: #cbd5e1;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .nav-links a:hover {
@@ -87,17 +100,18 @@
     }
 
     .nav-btn {
-      padding: 12px 20px;
+      padding: 12px 19px;
       background: #22c55e;
       color: #02110a;
       border-radius: 999px;
       font-weight: 900;
       box-shadow: 0 12px 35px rgba(34,197,94,0.25);
+      white-space: nowrap;
     }
 
     .hero {
       min-height: 100vh;
-      padding: 140px 0 80px;
+      padding: 135px 0 70px;
       position: relative;
       background:
         radial-gradient(circle at 15% 20%, rgba(34,197,94,0.25), transparent 25%),
@@ -110,7 +124,7 @@
       display: grid;
       grid-template-columns: 1.05fr 0.95fr;
       align-items: center;
-      gap: 55px;
+      gap: 52px;
     }
 
     .badge {
@@ -128,8 +142,8 @@
     }
 
     h1 {
-      font-size: clamp(42px, 6vw, 78px);
-      line-height: 0.95;
+      font-size: clamp(40px, 5.8vw, 76px);
+      line-height: 0.96;
       letter-spacing: -3px;
       font-weight: 900;
       margin-bottom: 24px;
@@ -137,10 +151,6 @@
 
     .green {
       color: #22c55e;
-    }
-
-    .blue {
-      color: #38bdf8;
     }
 
     .hero-text {
@@ -158,14 +168,23 @@
       align-items: center;
     }
 
-    .primary-btn {
-      padding: 17px 26px;
-      background: linear-gradient(135deg, #22c55e, #84cc16);
-      color: #031308;
+    .primary-btn,
+    .secondary-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 56px;
+      padding: 16px 25px;
       border-radius: 16px;
       font-weight: 900;
-      box-shadow: 0 18px 45px rgba(34,197,94,0.28);
       transition: 0.25s;
+      text-align: center;
+    }
+
+    .primary-btn {
+      background: linear-gradient(135deg, #22c55e, #84cc16);
+      color: #031308;
+      box-shadow: 0 18px 45px rgba(34,197,94,0.28);
     }
 
     .primary-btn:hover {
@@ -174,11 +193,8 @@
     }
 
     .secondary-btn {
-      padding: 17px 26px;
       border: 1px solid rgba(255,255,255,0.16);
       color: #ffffff;
-      border-radius: 16px;
-      font-weight: 800;
       background: rgba(255,255,255,0.05);
     }
 
@@ -205,7 +221,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(2,6,23,0.95), rgba(2,6,23,0.10));
+      background: linear-gradient(to top, rgba(2,6,23,0.96), rgba(2,6,23,0.10));
     }
 
     .floating-panel {
@@ -214,11 +230,21 @@
       left: 24px;
       right: 24px;
       bottom: 24px;
-      background: rgba(2,6,23,0.82);
+      background: rgba(2,6,23,0.84);
       backdrop-filter: blur(18px);
       border: 1px solid rgba(255,255,255,0.14);
       border-radius: 24px;
       padding: 24px;
+    }
+
+    .floating-panel h3 {
+      font-size: 22px;
+      margin-bottom: 6px;
+    }
+
+    .floating-panel p {
+      color: #94a3b8;
+      line-height: 1.6;
     }
 
     .mini-stats {
@@ -248,7 +274,7 @@
     }
 
     .section {
-      padding: 95px 0;
+      padding: 92px 0;
     }
 
     .section-title {
@@ -258,7 +284,7 @@
     }
 
     .section-title h2 {
-      font-size: clamp(32px, 4vw, 54px);
+      font-size: clamp(31px, 4vw, 54px);
       line-height: 1.05;
       letter-spacing: -2px;
       margin-bottom: 18px;
@@ -295,8 +321,7 @@
     .service-card {
       padding: 34px;
       border-radius: 28px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
       border: 1px solid rgba(255,255,255,0.09);
       transition: 0.25s;
       min-height: 285px;
@@ -350,6 +375,19 @@
       display: block;
     }
 
+    .split h2 {
+      font-size: clamp(32px, 4vw, 52px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+      letter-spacing: -1.5px;
+    }
+
+    .split-text {
+      color: #94a3b8;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
     .checklist {
       display: grid;
       gap: 18px;
@@ -375,7 +413,6 @@
     }
 
     .process-card {
-      position: relative;
       padding: 30px;
       border-radius: 26px;
       background: #0f172a;
@@ -434,6 +471,7 @@
 
     .stat-card p {
       color: #cbd5e1;
+      line-height: 1.55;
     }
 
     .testimonials {
@@ -462,6 +500,7 @@
     }
 
     .avatar {
+      min-width: 48px;
       width: 48px;
       height: 48px;
       border-radius: 50%;
@@ -520,6 +559,7 @@
       font-size: clamp(32px, 4vw, 56px);
       line-height: 1.05;
       margin-bottom: 18px;
+      letter-spacing: -1.5px;
     }
 
     .cta-box p {
@@ -567,59 +607,208 @@
       100% { transform: scale(1); }
     }
 
-    .glow {
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      background: rgba(34,197,94,0.18);
-      filter: blur(70px);
-      pointer-events: none;
-    }
-
-    .glow-one {
-      top: 120px;
-      left: -70px;
-    }
-
-    .glow-two {
-      bottom: 20px;
-      right: -80px;
-      background: rgba(56,189,248,0.18);
-    }
-
-    @media (max-width: 900px) {
-      .nav-links {
-        display: none;
-      }
-
+    /* TABLET */
+    @media (max-width: 1050px) {
       .hero-grid,
       .split {
         grid-template-columns: 1fr;
       }
 
-      .hero-card {
-        min-height: 460px;
+      .hero {
+        padding-top: 125px;
       }
 
-      .services-grid,
+      .hero-card {
+        min-height: 500px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       .process,
-      .stats-grid,
-      .testimonials,
-      .logos {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .testimonials {
         grid-template-columns: 1fr;
       }
 
-      h1 {
-        letter-spacing: -1.5px;
+      .logos {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* CELULAR */
+    @media (max-width: 700px) {
+      .container {
+        width: 90%;
       }
 
-      .image-wrap img {
-        height: 360px;
+      .nav {
+        min-height: auto;
+        padding: 13px 0;
+      }
+
+      .logo {
+        font-size: 15px;
+      }
+
+      .logo-icon {
+        min-width: 38px;
+        width: 38px;
+        height: 38px;
+        border-radius: 12px;
+        font-size: 13px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-btn {
+        padding: 10px 13px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 115px 0 55px;
+      }
+
+      .badge {
+        font-size: 12px;
+        line-height: 1.4;
+        border-radius: 18px;
+        align-items: flex-start;
+      }
+
+      h1 {
+        font-size: clamp(38px, 12vw, 48px);
+        line-height: 1.02;
+        letter-spacing: -1.8px;
+      }
+
+      .hero-text {
+        font-size: 16px;
+        line-height: 1.75;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .primary-btn,
+      .secondary-btn {
+        width: 100%;
+        min-height: 54px;
+        padding: 15px 18px;
+        font-size: 15px;
+      }
+
+      .hero-card {
+        min-height: 430px;
+        border-radius: 26px;
+      }
+
+      .floating-panel {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        padding: 18px;
+        border-radius: 20px;
       }
 
       .mini-stats {
         grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .section-title {
+        margin-bottom: 34px;
+      }
+
+      .section-title h2,
+      .split h2,
+      .cta-box h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+      }
+
+      .section-title p,
+      .cta-box p {
+        font-size: 16px;
+      }
+
+      .logos,
+      .services-grid,
+      .process,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card,
+      .process-card,
+      .stat-card,
+      .testimonial {
+        padding: 24px;
+        border-radius: 24px;
+      }
+
+      .image-wrap {
+        border-radius: 24px;
+      }
+
+      .image-wrap img {
+        height: 300px;
+      }
+
+      .cta {
+        padding: 70px 0;
+      }
+
+      .cta-box {
+        padding: 38px 22px;
+        border-radius: 28px;
+      }
+
+      .footer-grid {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .whatsapp-float {
+        width: 56px;
+        height: 56px;
+        right: 16px;
+        bottom: 16px;
+        font-size: 25px;
+      }
+    }
+
+    /* CELULAR PEQUEÑO */
+    @media (max-width: 390px) {
+      .logo span {
+        display: none;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .nav-btn {
+        font-size: 11px;
+        padding: 9px 11px;
+      }
+
+      .hero-card {
+        min-height: 410px;
       }
     }
   </style>
@@ -641,14 +830,13 @@
         <a href="#faq">Preguntas</a>
       </div>
 
-      <a class="nav-btn" href="https://wa.me/56921831815?text=Hola%2C%20quiero%20una%20auditor%C3%ADa%20gratis%20para%20mi%20negocio">Auditoría gratis</a>
+      <a class="nav-btn" href="https://wa.me/56921831815?text=Hola%2C%20quiero%20una%20auditor%C3%ADa%20gratis%20para%20mi%20negocio">
+        Auditoría gratis
+      </a>
     </div>
   </div>
 
   <section class="hero" id="inicio">
-    <div class="glow glow-one"></div>
-    <div class="glow glow-two"></div>
-
     <div class="container hero-grid">
       <div>
         <div class="badge">🚀 Agencia enfocada en clientes, no solo clics</div>
@@ -677,7 +865,7 @@
         <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1100&q=85" alt="Equipo de marketing digital trabajando">
         <div class="floating-panel">
           <h3>Panel de crecimiento</h3>
-          <p style="color:#94a3b8;margin-top:6px;">Campañas, conversiones y ventas bajo control.</p>
+          <p>Campañas, conversiones y ventas bajo control.</p>
 
           <div class="mini-stats">
             <div class="mini-stat">
@@ -730,49 +918,37 @@
         <div class="service-card">
           <div class="icon">🎯</div>
           <h3>Google Ads</h3>
-          <p>
-            Creamos campañas para aparecer justo cuando tus clientes buscan tus productos o servicios en Google.
-          </p>
+          <p>Creamos campañas para aparecer justo cuando tus clientes buscan tus productos o servicios en Google.</p>
         </div>
 
         <div class="service-card">
           <div class="icon">🔎</div>
           <h3>SEO en Google</h3>
-          <p>
-            Optimizamos tu página para que pueda posicionarse de forma orgánica y recibir visitas sin pagar por cada clic.
-          </p>
+          <p>Optimizamos tu página para que pueda posicionarse de forma orgánica y recibir visitas sin pagar por cada clic.</p>
         </div>
 
         <div class="service-card">
           <div class="icon">⚡</div>
           <h3>Landing Pages</h3>
-          <p>
-            Creamos páginas modernas, rápidas y enfocadas en convertir visitas en contactos reales por WhatsApp.
-          </p>
+          <p>Creamos páginas modernas, rápidas y enfocadas en convertir visitas en contactos reales por WhatsApp.</p>
         </div>
 
         <div class="service-card">
           <div class="icon">📊</div>
           <h3>Medición y reportes</h3>
-          <p>
-            Revisamos resultados, consultas y oportunidades para que sepas qué está funcionando y qué se debe mejorar.
-          </p>
+          <p>Revisamos resultados, consultas y oportunidades para que sepas qué está funcionando y qué se debe mejorar.</p>
         </div>
 
         <div class="service-card">
           <div class="icon">💬</div>
           <h3>WhatsApp estratégico</h3>
-          <p>
-            Conectamos los botones de la web y anuncios directo a WhatsApp para que los clientes te contacten más rápido.
-          </p>
+          <p>Conectamos los botones de la web y anuncios directo a WhatsApp para que los clientes te contacten más rápido.</p>
         </div>
 
         <div class="service-card">
           <div class="icon">🧠</div>
           <h3>Estrategia digital</h3>
-          <p>
-            Analizamos tu rubro, competencia, oferta y presupuesto para crear una estrategia realista y competitiva.
-          </p>
+          <p>Analizamos tu rubro, competencia, oferta y presupuesto para crear una estrategia realista y competitiva.</p>
         </div>
       </div>
     </div>
@@ -786,10 +962,9 @@
 
       <div>
         <div class="badge">📈 Método claro y medible</div>
-        <h2 style="font-size: clamp(32px, 4vw, 52px); line-height:1.05; margin-bottom:18px;">
-          No se trata de gastar más. Se trata de invertir mejor.
-        </h2>
-        <p style="color:#94a3b8;line-height:1.8;font-size:17px;">
+        <h2>No se trata de gastar más. Se trata de invertir mejor.</h2>
+
+        <p class="split-text">
           Muchas empresas pagan publicidad sin saber si realmente les está dando resultados. Nosotros ordenamos la estrategia, mejoramos la página, configuramos campañas y medimos el rendimiento para que cada peso tenga una intención clara.
         </p>
 
@@ -806,9 +981,7 @@
     <div class="container">
       <div class="section-title">
         <h2>Nuestro método de trabajo</h2>
-        <p>
-          Un proceso simple, ordenado y pensado para que puedas entender qué estamos haciendo y por qué.
-        </p>
+        <p>Un proceso simple, ordenado y pensado para que puedas entender qué estamos haciendo y por qué.</p>
       </div>
 
       <div class="process">
@@ -843,9 +1016,7 @@
     <div class="container">
       <div class="section-title">
         <h2>Resultados que importan</h2>
-        <p>
-          Nos enfocamos en métricas que un dueño de negocio entiende: consultas, clientes, retorno y crecimiento.
-        </p>
+        <p>Nos enfocamos en métricas que un dueño de negocio entiende: consultas, clientes, retorno y crecimiento.</p>
       </div>
 
       <div class="stats-grid">
@@ -876,16 +1047,12 @@
     <div class="container">
       <div class="section-title">
         <h2>Lo que podría decir un cliente satisfecho</h2>
-        <p>
-          Puedes reemplazar estos textos por testimonios reales cuando consigas tus primeros clientes.
-        </p>
+        <p>Puedes reemplazar estos textos por testimonios reales cuando consigas tus primeros clientes.</p>
       </div>
 
       <div class="testimonials">
         <div class="testimonial">
-          <p>
-            “Antes pagábamos publicidad sin saber qué pasaba. Ahora tenemos más consultas y entendemos mejor nuestros números.”
-          </p>
+          <p>“Antes pagábamos publicidad sin saber qué pasaba. Ahora tenemos más consultas y entendemos mejor nuestros números.”</p>
           <div class="person">
             <div class="avatar">M</div>
             <div>
@@ -896,9 +1063,7 @@
         </div>
 
         <div class="testimonial">
-          <p>
-            “La página quedó mucho más clara y los clientes ahora llegan directo a WhatsApp. Eso nos ayudó bastante.”
-          </p>
+          <p>“La página quedó mucho más clara y los clientes ahora llegan directo a WhatsApp. Eso nos ayudó bastante.”</p>
           <div class="person">
             <div class="avatar">C</div>
             <div>
@@ -909,9 +1074,7 @@
         </div>
 
         <div class="testimonial">
-          <p>
-            “Nos explicaron todo simple, sin palabras raras. La estrategia quedó ordenada y con foco en ventas.”
-          </p>
+          <p>“Nos explicaron todo simple, sin palabras raras. La estrategia quedó ordenada y con foco en ventas.”</p>
           <div class="person">
             <div class="avatar">V</div>
             <div>
@@ -928,38 +1091,28 @@
     <div class="container">
       <div class="section-title">
         <h2>Preguntas frecuentes</h2>
-        <p>
-          Respondemos lo que normalmente pregunta una empresa antes de invertir en marketing digital.
-        </p>
+        <p>Respondemos lo que normalmente pregunta una empresa antes de invertir en marketing digital.</p>
       </div>
 
       <div class="faq">
         <details>
           <summary>¿Google Ads sirve para cualquier negocio?</summary>
-          <p>
-            Sirve mejor cuando las personas ya buscan tu servicio en Google. Por ejemplo: abogados, clínicas, talleres, constructoras, servicios técnicos, reciclaje, logística, ecommerce y negocios locales.
-          </p>
+          <p>Sirve mejor cuando las personas ya buscan tu servicio en Google. Por ejemplo: abogados, clínicas, talleres, constructoras, servicios técnicos, reciclaje, logística, ecommerce y negocios locales.</p>
         </details>
 
         <details>
           <summary>¿Cuánto dinero necesito para empezar?</summary>
-          <p>
-            Depende del rubro y competencia. Lo recomendable es comenzar con un presupuesto controlado, medir resultados y luego escalar lo que funcione.
-          </p>
+          <p>Depende del rubro y competencia. Lo recomendable es comenzar con un presupuesto controlado, medir resultados y luego escalar lo que funcione.</p>
         </details>
 
         <details>
           <summary>¿Qué diferencia hay entre SEO y Google Ads?</summary>
-          <p>
-            Google Ads te permite aparecer más rápido pagando por clics. SEO demora más, pero ayuda a recibir visitas orgánicas en el tiempo. Lo ideal es combinar ambos.
-          </p>
+          <p>Google Ads te permite aparecer más rápido pagando por clics. SEO demora más, pero ayuda a recibir visitas orgánicas en el tiempo. Lo ideal es combinar ambos.</p>
         </details>
 
         <details>
           <summary>¿La auditoría gratis tiene costo oculto?</summary>
-          <p>
-            No. La auditoría es una revisión inicial para detectar oportunidades y mostrarte cómo podrías mejorar tu captación de clientes.
-          </p>
+          <p>No. La auditoría es una revisión inicial para detectar oportunidades y mostrarte cómo podrías mejorar tu captación de clientes.</p>
         </details>
       </div>
     </div>
